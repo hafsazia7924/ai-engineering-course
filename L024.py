@@ -7,7 +7,7 @@ data={
 df=pd.DataFrame(data)
 print(df.iloc[0])
 print(df.iloc[1,1])
-print(df.iloc[0:2])
+print(df.iloc[0:2])   #row 0,1
 print(df.iloc[:, 1])  #one column
 
 df_named=df.set_index("name")
