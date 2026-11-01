@@ -47,9 +47,10 @@ data = {
 class_df = pd.DataFrame(data)
 mask = class_df["marks"] > 60
 passed_df = class_df.loc[mask,["name", "marks"]]
+print(passed_df)
 plt.bar(passed_df["name"], passed_df["marks"])
 plt.title("Students above 60")
 plt.xlabel("Name")
 plt.ylabel("Marks")
-plt.savefig("Passed_bar.png")
+plt.savefig("passed_bar.png")
 plt.show()
