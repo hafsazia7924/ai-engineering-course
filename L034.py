@@ -48,7 +48,7 @@ df_orders = pd.DataFrame(orders_data)
 # Task 2
 print(df_orders.shape)
 #Task 3
-print(df_orders["city"].value_counts)
+print(df_orders["city"].value_counts())
 # Task 4
 sns.countplot(data=df_orders, x="city")
 plt.title("Orders per city")
@@ -59,7 +59,5 @@ sns.boxplot(data=df_orders, x="amount")
 plt.title("Order amounts")
 plt.savefig("order_box.png")
 plt.show()
-# This box plot shows the median, upper and lower quartiles, whiskers, and outliers in the order amounts.
-# It helps identify unusual order amounts and understand the distribution and variation of orders.
 #Task 6
 print(df_orders.loc[df_orders["amount"] > 1000, ["order_id", "city"]])
