@@ -36,17 +36,13 @@ data_shop = {
     "shop_rent": [500, 500, 500, 500, 500]
 }
 df_shop = pd.DataFrame(data_shop)
-#Task 1
-print(df_shop.corr(numeric_only=True).round(2))
-# Task 2
-print(df_shop.corr(numeric_only=True)["cold_drinks"].round(2))
-# Task 3
 corr_shop = df_shop.corr(numeric_only=True)
+#Task 1
+print(corr_shop.round(2))
+# Task 2
+print(corr_shop["cold_drinks"].round(2).sort_values(ascending=False))
+# Task 3
 sns.heatmap(corr_shop, annot=True, fmt=" .2f", cmap="coolwarm", vmin=-1, vmax=1)
 plt.title("Heatmap for shop")
 plt.savefig("heatmap_shop.png")
 plt.show()
-
-#Reading: temp and cold drinks pair has strongly positive relation
-#Reading: temp andumbrellas pair has strongly negative relation
-#Reading: shop_Rent gives nan value
