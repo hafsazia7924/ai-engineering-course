@@ -47,4 +47,5 @@ print(cur.fetchall())
 cur.execute("SELECT students.name, AVG(results.marks) AS average_marks FROM students LEFT JOIN results ON students.id = results.student_id GROUP BY students.id, students.name ORDER BY average_marks DESC")
 print(cur.fetchall())
 
+
 conn.close()
